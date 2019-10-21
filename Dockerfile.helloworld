@@ -1,0 +1,12 @@
+#simple dockerfile for executing a py script
+
+# image to inherit from
+From python
+# usefull variable to see python messages in console
+ENV PYTHONUNBUFFERED 1
+# copy working file to image
+COPY . /code/
+# set the workdir as /code/
+WORKDIR /code/
+# Execute script
+CMD python ./helloworld.py
